@@ -2,10 +2,13 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:musicapp/Constants/dumy_datat.dart';
+import 'package:musicapp/Utils/buttons.dart';
 import 'package:musicapp/Utils/navigation_bar.dart';
 import 'package:musicapp/View/Screens/Home/utiles.dart';
 import 'package:musicapp/View/Screens/wellcome_screen.dart';
@@ -28,9 +31,41 @@ class _HomeGalleryState extends State<HomeGallery> {
       body: Column(
         children: [
           Expanded(
-              flex: 5,
+              flex: 4,
               child: Container(
-                  // child: ,
+                  child: Stack( 
+
+                    children: [ 
+                      Container( 
+                        width: double.infinity,
+                        decoration: BoxDecoration( 
+                          image: DecorationImage( 
+                          fit:BoxFit.cover,
+
+                            image: AssetImage("lib/Assets/img/home scrrenSliding.png")
+                          )
+                        ),
+                      ),
+
+                      Container( 
+                        margin: EdgeInsets.only(top: 250 ,left: 20),
+                        child:Column( 
+
+                          children: [ 
+                            Text("A.L.O.N.E",
+                              style: GoogleFonts.inter( 
+                                fontSize:36,
+                                fontWeight:FontWeight.w600,
+                                color:Colors.white
+                              ),
+                            ),
+
+                            buildRedButton(title: "Subscribe")
+                          ],
+                        )
+                      )
+                    ],
+                  ),
                   // color: Colors.red,
                   )),
           Expanded(
@@ -62,7 +97,7 @@ class _HomeGalleryState extends State<HomeGallery> {
                   Flexible(
                     child: Container(
                       alignment: Alignment.topCenter,
-                      height: 160,
+                      // height: 160,
                       child: ListView.builder(
                           itemCount: 4,
                           itemBuilder: (context, index) {

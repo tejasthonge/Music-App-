@@ -101,14 +101,17 @@ class _PlyerScreenState extends State<PlyerScreen> {
 
                   Container( 
                     padding: EdgeInsets.symmetric(horizontal: 20),
-                    margin: EdgeInsets.only(top: 650),
-            height: 100,
+                    margin: EdgeInsets.only(top: 630),
+            // height: 100,
             // color: Colors.red,
             width: double.infinity,
             child: Column( 
 
               children: [ 
-
+                Container(
+                  width: double.infinity,
+                  alignment: Alignment.centerRight,
+                  child: SvgPicture.asset("lib/Assets/icons/svg/radix-icons_share-2.svg"),),
                 Row( 
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
