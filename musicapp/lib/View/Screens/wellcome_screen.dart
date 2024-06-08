@@ -3,9 +3,14 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:musicapp/View/Screens/HomeGalleryScreen.dart';
+import 'package:musicapp/View/Screens/Home/Home_gallery_screen.dart';
+
+
+
+
 
 class WellcomeScreen extends StatefulWidget {
   const WellcomeScreen({super.key});
